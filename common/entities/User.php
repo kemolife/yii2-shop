@@ -41,7 +41,7 @@ class User extends ActiveRecord implements IdentityInterface
      * @param string $password
      * @return User
      */
-    public static function signup(string $name, string $email, string $password) :self 
+    public static function signup(string $name, string $email, string $password) : self
     {
         $user = new User();
         $user->username = $name;
