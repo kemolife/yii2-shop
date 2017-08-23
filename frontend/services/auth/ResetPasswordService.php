@@ -35,7 +35,7 @@ class ResetPasswordService
         ]);
 
         if (!$user) {
-            return false;
+            throw new \DomainException('User not find.');
         }
 
         if (!User::isPasswordResetTokenValid($user->password_reset_token)) {
